@@ -15,7 +15,7 @@ if(WIN32)
 else()
     set(USERHOME $ENV{HOME})
 endif()
-set(sdkVersion 2.0.0)
+set(sdkVersion 1.5.1)
 set(toolchainVersion 13_2_Rel1)
 set(picotoolVersion 2.0.0)
 set(picoVscode ${USERHOME}/.pico-sdk/cmake/pico-vscode.cmake)
@@ -49,7 +49,7 @@ pico_enable_stdio_usb(Serial_PWM_interface 0)
 
 # Add the standard library to the build
 target_link_libraries(Serial_PWM_interface
-        pico_stdlib)
+        pico_stdlib hardware_pwm)
 
 # Add the standard include files to the build
 target_include_directories(Serial_PWM_interface PRIVATE
