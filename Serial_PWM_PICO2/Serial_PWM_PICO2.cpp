@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
-#include "hardware/pio.h"
 #include "hardware/timer.h"
 #include "hardware/uart.h"
 #include "hardware/pwm.h"
 
-#include "blink.pio.h"
 
 int64_t alarm_callback(alarm_id_t id, void *user_data) {
     // Put your timeout handler code in here
